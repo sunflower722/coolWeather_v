@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff018786">
+
+    <ImageView
+        android:id="@+id/bing_pic_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <!--   滑动菜单    -->
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!--   第一部分：主屏幕显示内容    -->
+    <!--   实现下拉刷新    -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipe_refresh">
+        <!--   第二部分：滑动菜单中显示内容    -->
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.coolweather.ChooseAreaFragment"
+            android:layout_gravity="start"/>
+
+<!--    <ScrollView-->
+<!--        android:id="@+id/weather_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:overScrollMode="never"-->
+<!--        android:scrollbars="none">-->
+
+<!--    &lt;!&ndash;   主要内容    &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <include layout="@layout/title"/>-->
+<!--        <include layout="@layout/now"/>-->
+<!--        <include layout="@layout/forecast"/>-->
+<!--        <include layout="@layout/aqi"/>-->
+<!--        <include layout="@layout/suggestion"/>-->
+
+<!--    </LinearLayout>-->
+
+<!--</ScrollView>-->
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</FrameLayout>
